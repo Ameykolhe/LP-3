@@ -148,7 +148,7 @@ class SDES:
 		
 		final_op = ip_inv_output
 		
-		print(f'Final encrypted output for {plain_text} is {final_op}')
+		#print(f'Final encrypted output for {plain_text} is {final_op}')
 		
 		return final_op
 		
@@ -175,7 +175,7 @@ class SDES:
 		ip_output = self.IP(fk1)
 		final_op = ip_output
 		'''
-		print(f'Final decrypted output for {cipher} is {final_op}')
+		#print(f'Final decrypted output for {cipher} is {final_op}')
 		
 		return final_op
 		
