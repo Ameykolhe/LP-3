@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -56,6 +50,8 @@ def draw_plot(data_points, centroids):
     ax.scatter(data_points[:, 0], data_points[:, 1], s= 50, c = 'b', marker = '.', label = 'data')
     ax.scatter(centroids[:,0], centroids[:,1], s = 50, c = 'r', marker = 'x', label = 'centroids')
 
+    plt.savefig('output/plot.jpg')
+
 if __name__ == "__main__":
     filename = os.path.dirname('kmeans.py') + "data/sample.csv"
     data_points = np.genfromtxt(filename, delimiter=",")
@@ -64,7 +60,5 @@ if __name__ == "__main__":
     
     [cluster_label, new_centroids] = iterate_k_means(data_points, centroids, total_iteration)
     print_label_data([cluster_label, new_centroids])
-    print()
-    
     
     draw_plot(data_points, new_centroids)

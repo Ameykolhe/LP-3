@@ -219,11 +219,11 @@ def convert_8_bit_stream_to_sentence(stream):
 if __name__ == '__main__':
 	#logging.basicConfig(level=logging.DEBUG)
 	
-	bin_stream = convert_sentence_to_8_bit_stream(input())
+	bin_stream = convert_sentence_to_8_bit_stream(input('Enter String to Encrypt : '))
 	encryption = encrypt_stream(bin_stream)
 	decryption = decrypt_stream(encryption)
 	final_output = convert_8_bit_stream_to_sentence(decryption)
-	print(final_output)
+	print( 'Decrypted String : {}'.format(final_output) )
 	'''
 	ency = SDES()
 	cipher = ency.encrypt('11111000')

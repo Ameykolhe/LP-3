@@ -3,8 +3,8 @@ Make the imports of python packages needed
 """
 import pandas as pd
 import numpy as np
-from pprint import pprint
 
+import json
 
 
 #Import the dataset and define the feature as well as the target datasets / columns#
@@ -132,7 +132,7 @@ training_data = dataset.drop('ID', axis=1)
 Train the tree and Print the tree
 """
 tree = ID3(training_data,training_data,training_data.columns[:-1])
-pprint(tree)
+print(json.dumps(tree, indent=4))
 
 
 #: Query Testing

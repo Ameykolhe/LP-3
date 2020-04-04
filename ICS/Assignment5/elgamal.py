@@ -69,7 +69,7 @@ def decrypt(en_msg, p, key, q):
 	
 def main():
 	
-	msg = 'encryption'
+	msg = 'Hello'
 	print("Original Message: ", msg)
 	
 	q = random.randint(10**1000, 10**1500)

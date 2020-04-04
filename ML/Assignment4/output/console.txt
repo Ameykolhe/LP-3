@@ -1,0 +1,29 @@
+Result of k-Means Clustering: 
+
+data point: [0.1 0.6]
+cluster number: 0 
+
+data point: [0.15 0.71]
+cluster number: 0 
+
+data point: [0.08 0.9 ]
+cluster number: 0 
+
+data point: [0.16 0.85]
+cluster number: 0 
+
+data point: [0.2 0.3]
+cluster number: 1 
+
+data point: [0.25 0.5 ]
+cluster number: 1 
+
+data point: [0.24 0.1 ]
+cluster number: 1 
+
+data point: [0.3 0.2]
+cluster number: 1 
+
+Last centroids position: 
+ [[0.13333333 0.828     ]
+ [0.27066667 0.22      ]]

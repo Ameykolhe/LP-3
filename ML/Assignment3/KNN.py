@@ -1,5 +1,6 @@
 import math
 
+import matplotlib.pyplot as plt
 
 class KNN(object):
 	def __init__(self,k):
@@ -35,7 +36,6 @@ class KNN(object):
 			self.class_count[c[1]] += 1
 			
 			
-			
 	def predict(self, test_point):
 		self.test_point = test_point
 		self.compute_distances()
@@ -48,6 +48,18 @@ class KNN(object):
 				class_of_test_point = key
 				
 		print('Class of Point ', test_point, ' is : ',class_of_test_point)
+
+
+	def plot_points(self):
+		x, y, c = list(zip(*self.data))
+
+		fig = plt.figure()
+
+		ax = fig.add_subplot(111)
+		ax.scatter(x, y, c=c, marker='.')
+		ax.scatter([self.test_point[0]], [self.test_point[1]], c='0.6', marker='x')
+
+		plt.savefig('output/plot.jpg')
 		
 if __name__ == '__main__':
 	test_point = (6,6)
@@ -55,5 +67,6 @@ if __name__ == '__main__':
 	classifier = KNN(3)
 	classifier.read_data('data/sample.csv')
 	classifier.predict(test_point)
+	classifier.plot_points()
 	
 			
